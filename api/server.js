@@ -21,6 +21,17 @@ server.get('/games', async (req, res) => {
     }
 });
 
+server.get('/games/:id', async (req, res) => {
+    try {
+        const game = await db('games')
+        .where(({id: req.params.id}))
+        .first();
+        res.status(200).json(game);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+
 server.post('/games', async (req, res) => {
     const{title, genre} = req.body;
     if(!title || !genre)

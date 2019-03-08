@@ -3,7 +3,7 @@
 exports.up = function(knex, Promise) {
 	return knex.schema.createTable("games", table => {
 		table.increments();
-		table.string("title");
+		table.string("title").unique();
 		table.string("genre");
 		table.integer("releaseYear");
 	});
