@@ -30,8 +30,13 @@ describe breaks your test suite into different components where it is where you 
 
 1. What is the point of `Test Driven Development`? What do you think about this approach?
 
+TDD helps to diminish bugs and reversions before deployment during the production phase.  I think it's a safe approach and takes up minimal time if done well.
 
 1. Mention three types of automated tests.
+unit tests
+integration tests
+snapshot tests
+
 
 ## Project Set Up
 
